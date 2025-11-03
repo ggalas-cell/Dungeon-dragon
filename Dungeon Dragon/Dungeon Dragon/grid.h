@@ -1,12 +1,9 @@
 #pragma once
 
-struc grid
+struct grid
 {
   public:
     int line;
     int column;
-    int difficulty;
-    void difficulty()
-    void displaygrid(int line, int columns);
 };
 
