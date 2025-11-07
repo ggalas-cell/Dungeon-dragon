@@ -1,9 +1,19 @@
 #pragma once
+#include "heroes.h"
+#include "enemies.h"
+#include "cell.h"
 
-struct grid
+class grid : public cell
 {
-  public:
-    int line;
-    int column;
+public :
+    int lines;
+    int columns;
+    int diffi;
+    int enemyset;
+    int enemyneeded;
+    int difficulty();
+    void displaygrid();
+    void setenemy();
+    //grid();
 };
 
