@@ -1,10 +1,11 @@
-#include <iostream>
+#include "game.h"
 
 int main()
 {
-	//menu
-
-
+	Game game;
+    game.Initialise();
+	game.GameLoop();
+	game.ShutDown();
 	return 0;
 }
 
@@ -26,7 +27,9 @@ int main()
 //toutes les 10 manche boss
 //bonus couleur grille pour montrer victoire
 // save stat
-//combat 
+//attaque zone
+// afficher stat sous grid ou sur commande 
+
 
 
 
