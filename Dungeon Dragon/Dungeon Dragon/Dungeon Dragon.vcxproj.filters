@@ -25,17 +25,17 @@
     <Filter Include="Fichiers d%27en-tête\character.h">
       <UniqueIdentifier>{5e45310b-9211-41c9-9bfc-ba08860062f8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\character.cpp\heros.cpp">
-      <UniqueIdentifier>{6573a4e3-d9ba-4d4d-9e7b-b59928ed85cc}</UniqueIdentifier>
+    <Filter Include="Fichiers d%27en-tête\character.h\enemies.h">
+      <UniqueIdentifier>{7723e6df-45a6-403b-98c6-841d181a2b09}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\character.cpp\enemys.cpp">
-      <UniqueIdentifier>{fad07bd3-2cc1-4d3d-bf1b-7fd31c710110}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\character.h\heros.h">
+    <Filter Include="Fichiers d%27en-tête\character.h\heroes.h">
       <UniqueIdentifier>{8778dcb6-7c3a-4be3-a13b-ccac7b86c470}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\character.h\enemys.h">
-      <UniqueIdentifier>{7723e6df-45a6-403b-98c6-841d181a2b09}</UniqueIdentifier>
+    <Filter Include="Fichiers sources\character.cpp\enemies.cpp">
+      <UniqueIdentifier>{fad07bd3-2cc1-4d3d-bf1b-7fd31c710110}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\character.cpp\heroes.cpp">
+      <UniqueIdentifier>{6573a4e3-d9ba-4d4d-9e7b-b59928ed85cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -51,17 +51,20 @@
     <ClInclude Include="character.h">
       <Filter>Fichiers d%27en-tête\character.h</Filter>
     </ClInclude>
-    <ClInclude Include="heros.h">
-      <Filter>Fichiers d%27en-tête\character.h\heros.h</Filter>
+    <ClInclude Include="heroes.h">
+      <Filter>Fichiers d%27en-tête\character.h\heroes.h</Filter>
     </ClInclude>
-    <ClInclude Include="enemys.h">
-      <Filter>Fichiers d%27en-tête\character.h\enemys.h</Filter>
+    <ClInclude Include="enemies.h">
+      <Filter>Fichiers d%27en-tête\character.h\enemies.h</Filter>
     </ClInclude>
     <ClInclude Include="enemysmanager.h">
-      <Filter>Fichiers d%27en-tête\character.h\enemys.h</Filter>
+      <Filter>Fichiers d%27en-tête\character.h\enemies.h</Filter>
     </ClInclude>
     <ClInclude Include="heromanager.h">
-      <Filter>Fichiers d%27en-tête\character.h\heros.h</Filter>
+      <Filter>Fichiers d%27en-tête\character.h\heroes.h</Filter>
+    </ClInclude>
+    <ClInclude Include="cell.h">
+      <Filter>Fichiers d%27en-tête\map.h</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -83,17 +86,20 @@
     <ClCompile Include="character.cpp">
       <Filter>Fichiers sources\character.cpp</Filter>
     </ClCompile>
-    <ClCompile Include="heros.cpp">
-      <Filter>Fichiers sources\character.cpp\heros.cpp</Filter>
+    <ClCompile Include="heroes.cpp">
+      <Filter>Fichiers sources\character.cpp\heroes.cpp</Filter>
     </ClCompile>
-    <ClCompile Include="enemys.cpp">
-      <Filter>Fichiers sources\character.cpp\enemys.cpp</Filter>
+    <ClCompile Include="enemies.cpp">
+      <Filter>Fichiers sources\character.cpp\enemies.cpp</Filter>
     </ClCompile>
     <ClCompile Include="enemysmanager.cpp">
-      <Filter>Fichiers sources\character.cpp\enemys.cpp</Filter>
+      <Filter>Fichiers sources\character.cpp\enemies.cpp</Filter>
     </ClCompile>
     <ClCompile Include="heromanager.cpp">
-      <Filter>Fichiers sources\character.cpp\heros.cpp</Filter>
+      <Filter>Fichiers sources\character.cpp\heroes.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="cell.cpp">
+      <Filter>Fichiers sources\map.cpp</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
