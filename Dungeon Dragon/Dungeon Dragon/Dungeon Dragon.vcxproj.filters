@@ -64,7 +64,7 @@
       <Filter>Fichiers d%27en-tête\character.h\heroes.h</Filter>
     </ClInclude>
     <ClInclude Include="cell.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\map.h</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -86,10 +86,10 @@
     <ClCompile Include="character.cpp">
       <Filter>Fichiers sources\character.cpp</Filter>
     </ClCompile>
-    <ClCompile Include="heros.cpp">
+    <ClCompile Include="heroes.cpp">
       <Filter>Fichiers sources\character.cpp\heroes.cpp</Filter>
     </ClCompile>
-    <ClCompile Include="enemys.cpp">
+    <ClCompile Include="enemies.cpp">
       <Filter>Fichiers sources\character.cpp\enemies.cpp</Filter>
     </ClCompile>
     <ClCompile Include="enemysmanager.cpp">
@@ -99,7 +99,7 @@
       <Filter>Fichiers sources\character.cpp\heroes.cpp</Filter>
     </ClCompile>
     <ClCompile Include="cell.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\map.cpp</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

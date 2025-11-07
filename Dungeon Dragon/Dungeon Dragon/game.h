@@ -13,6 +13,7 @@ enum class Gamefunction
 {
 	menu,
 	play,
+	map,
 	training,
 	fight,
 	doors,

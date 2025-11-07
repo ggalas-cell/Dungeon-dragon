@@ -1,5 +1,5 @@
 #pragma once
-class cell
+class Cell
 {
 public:
     bool ishero;

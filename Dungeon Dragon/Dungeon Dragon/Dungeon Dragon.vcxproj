@@ -137,12 +137,12 @@
     <ClCompile Include="cell.cpp" />
     <ClCompile Include="character.cpp" />
     <ClCompile Include="displaymanager.cpp" />
-    <ClCompile Include="enemys.cpp" />
+    <ClCompile Include="enemies.cpp" />
     <ClCompile Include="enemysmanager.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="grid.cpp" />
     <ClCompile Include="heromanager.cpp" />
-    <ClCompile Include="heros.cpp" />
+    <ClCompile Include="heroes.cpp" />
     <ClCompile Include="initialise.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

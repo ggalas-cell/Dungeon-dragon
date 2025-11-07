@@ -12,6 +12,7 @@ void Game::Initialise()
     char left = 'q';
     char right = 'd';
     function = Gamefunction::menu;
+    
 }
 
 void Game::GameLoop()
@@ -25,6 +26,9 @@ void Game::GameLoop()
                 break;
             case Gamefunction::play:
                 PlayGame();
+                break;
+            case Gamefunction::map:
+                //displaygrid();
                 break;
             
             case Gamefunction::fight:
@@ -209,7 +213,8 @@ void Game::Menu()
     )";
     std::cout << "\n";
     std::cout<<"1. Lancer le jeu\n ";
-    std::cout << "2.  Quitter\n";
+    std::cout << "3. Infinite Fights\n";
+    std::cout << "3.  Quitter\n";
     std::cout << "\n";
     std::cout << "/->";
     std::cin >> inp;
