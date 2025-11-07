@@ -1,57 +1,60 @@
-
 #pragma once
-#include <string>
-#include <iostream>
-class character
+#include <memory>
+#include <windows.h>
+#include <conio.h>
+#include <iomanip>
+#include <thread>
+#include <chrono>
+#include "enemies.h"
+#include "heroes.h"
+#include "grid.h"
+
+enum class Gamefunction
 {
+	menu,
+	play,
+	training,
+	fight,
+	doors,
+	win,
+	loose,
+	leave,
+};
+class Game
+{
+private:
+	bool isrunning;
 public:
-	float currentHp;
-	float maxHp;
-	float dmg;
-	float speed;
-	int lv;
-	bool dodge = false;
-	std::string name;
-	character(const std::string& n, float ch, float mh, float d, float sa, float lv)
-		: name(n), currentHp(ch),maxHp(mh),dmg(d),speed(sa),lv(lv){}
-	virtual ~character() = default;
-	bool isdead()const
-	{
-	    return currentHp<=0;
-	}
-	virtual void attack(character& target)
-	{
-		if (dodge) 
-		{ 
-		    std::cout<<name<<" attaque "<<target.name<<"\n";
-		    dodge = false; return; 
-		}
-		else
-		{
-			std::cout << name << " attaque " << target.name << "\n";
-			std::cout << target.name << " subit " << dmg << " degats ! \n";
-			target.takedmg(dmg);
-			dodge = false;
-		}
-	}
-	void takedmg(int dmg)
-	{
-		currentHp -= dmg;
-		if (currentHp < 0)currentHp = 0;
-		std::cout << name << " a maintenant " << currentHp << "/" << maxHp << " Hp.\n";
-	}
-	std::string GetName() const { return name; }
-	float GetcurrentHp() { return currentHp; }
-	float GetMaxHp() { return maxHp; }
-	float GetDmg() { return dmg; }
-	float GetSpeed() { return speed; }
-	float GetLv() { return lv; }
-	void SetDodge(bool dodgevalue)
-	{
-		dodge=dodgevalue;
-	}
-	void SetCurrentHp()
-	{
-		currentHp = maxHp;
-	}
+	//heroes
+	heroes* archer = new heroes("Archer", 350, 350, 20, 40, 1);
+	heroes* wizard = new heroes("Wizard", 200, 200, 40, 15, 1);
+	heroes* warrior = new heroes("Warrior", 300, 300, 30, 20, 1);
+
+	//enemies
+	enemies* goblin = new enemies("Goblin", 200, 200, 50, 30, 1);
+	enemies* skeleton = new enemies("Squelette", 250, 250, 40, 25, 1);
+	enemies* ghost = new enemies("Fantome", 150, 150, 30, 40, 1);
+
+	int diff;
+	int turn;
+	int choice;
+	int inp;
+	char input;
+	//char directioninput;
+
+	//menu
+	Gamefunction function;
+	Game();
+	Game(int d, int t, int c) :diff(d), turn(t), choice(c) {}
+
+
+	int Difficulty();
+	void Initialise();
+	void GameLoop();
+	void CharacterChoice();
+	void PlayGame();
+	void Fight();
+	void ShutDown();
+	void Menu();
+	void ResetCharacters();
 };

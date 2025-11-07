@@ -123,16 +123,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cell.h" />
     <ClInclude Include="character.h" />
     <ClInclude Include="displaymanager.h" />
-    <ClInclude Include="enemys.h" />
+    <ClInclude Include="enemies.h" />
     <ClInclude Include="enemysmanager.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="grid.h" />
     <ClInclude Include="heromanager.h" />
-    <ClInclude Include="heros.h" />
+    <ClInclude Include="heroes.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cell.cpp" />
     <ClCompile Include="character.cpp" />
     <ClCompile Include="displaymanager.cpp" />
     <ClCompile Include="enemys.cpp" />
