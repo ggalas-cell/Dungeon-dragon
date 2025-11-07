@@ -3,8 +3,17 @@
 class heros : public character
 {
 private:
-	int lvUp;
-	int exp;
+	int currentexp;
+	int maxexp;
+	void lvup(int lv)
+	{
+		if (currentexp != maxexp)
+		{
+			return;
+		}
+		lv++;
+		
+	}
+
 
 };
-
