@@ -213,7 +213,7 @@ void Game::Menu()
     )";
     std::cout << "\n";
     std::cout<<"1. Lancer le jeu\n ";
-    std::cout << "3. Infinite Fights\n";
+    //std::cout << "2. Infinite Fights\n";
     std::cout << "3.  Quitter\n";
     std::cout << "\n";
     std::cout << "/->";
@@ -221,7 +221,7 @@ void Game::Menu()
     switch(inp)
     {
         case 1:
-            function = Gamefunction::play;
+            function = Gamefunction::play; 
             break;
         case 2:
             function = Gamefunction::leave;

@@ -1,16 +1,16 @@
-//#include "game.h"
+#include "game.h"1
 #include "grid.h"
 
 int main()
 {
-	//Game game;
+	Game game;
 
-	Grid grid;
-	grid.difficulty();
-	grid.displaygrid();
-    //game.Initialise();
-	//game.GameLoop();
-	//game.ShutDown();
+	//Grid grid;
+	//grid.difficulty();
+	//grid.displaygrid();
+    game.Initialise();
+	game.GameLoop();
+	game.ShutDown();
 	return 0;
 }
 
