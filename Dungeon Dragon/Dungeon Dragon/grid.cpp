@@ -94,3 +94,4 @@ void Grid::setdoor()
         }
     }
 }b
+
