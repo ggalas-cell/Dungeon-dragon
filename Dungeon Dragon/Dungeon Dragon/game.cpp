@@ -1,3 +1,4 @@
+
 #include "game.h"
 
 Game::Game() : isrunning(false), function(Gamefunction::menu) {}
@@ -11,6 +12,7 @@ void Game::Initialise()
     char down = 's';
     char left = 'q';
     char right = 'd';
+    // _kbhit()
     function = Gamefunction::menu;
     
 }
@@ -130,22 +132,20 @@ void Game::GameLoop()
                 std::this_thread::sleep_for(std::chrono::seconds(3));
                 break;
             case Gamefunction::win:
-                std::cout << R"(
-
-                                                                                    
-                                                                                  
-             ___  ___    .--.    ___  ___     ___  ___  ___        ___ .-.  
-            (   )(   )  /    \  (   )(   )   (   )(   )(   )(''") (   )   \ 
-             | |  | |  |  .-. ;  | |  | |     | |  | |  | |  | |   |  .-. . 
-             | |  | |  | |  | |  | |  | |     | |  | |  | |  | |   | |  | | 
-             | '  | |  | |  | |  | |  | |     | |  | |  | |  | |   | |  | | 
-             '  `-' |  | |  | |  | |  | |     | |  | |  | |  | |   | |  | | 
-              `.__. |  | '  | |  | |  ; '     | |  ; '  | |  | |   | |  | | 
-              ___ | |  '  `-' /  ' `-'  /     ' `-'   `-' '  | |   | |  | | 
-             (   )' |   `.__.'    '.__.'       '.__.'.__.'  (___) (___)(___)
-              ; `-' '                                                       
-               .__.'                                                                                                       
-            )";
+                // win plus voyant
+                std::cout << R"(                       
+                 ___  ___    .--.    ___  ___     ___  ___  ___        ___ .-.  
+                (   )(   )  /    \  (   )(   )   (   )(   )(   )(''") (   )   \ 
+                 | |  | |  |  .-. ;  | |  | |     | |  | |  | |  | |   |  .-. . 
+                 | |  | |  | |  | |  | |  | |     | |  | |  | |  | |   | |  | | 
+                 | '  | |  | |  | |  | |  | |     | |  | |  | |  | |   | |  | | 
+                 '  `-' |  | |  | |  | |  | |     | |  | |  | |  | |   | |  | | 
+                  `.__. |  | '  | |  | |  ; '     | |  ; '  | |  | |   | |  | | 
+                  ___ | |  '  `-' /  ' `-'  /     ' `-'   `-' '  | |   | |  | | 
+                 (   )' |   `.__.'    '.__.'       '.__.'.__.'  (___) (___)(___)
+                  ; `-' '                                                       
+                   .__.'                                                                                                       
+                )";
                 function = Gamefunction::play;
                 break;
             case Gamefunction::loose:
@@ -213,7 +213,7 @@ void Game::Menu()
     )";
     std::cout << "\n";
     std::cout<<"1. Lancer le jeu\n ";
-    //std::cout << "2. Infinite Fights\n";
+    std::cout << "2. Fight loop\n";
     std::cout << "3.  Quitter\n";
     std::cout << "\n";
     std::cout << "/->";
@@ -223,9 +223,17 @@ void Game::Menu()
         case 1:
             function = Gamefunction::play; 
             break;
-        case 2:
+        // case 2:
+            // function = Gamefunction::;
+            // break;
+        case 3 :
             function = Gamefunction::leave;
-            break;
+        default:
+        std::cout<<"Erreur Valeur inconnue !!!"
+        std::cout<<"Veuillez saisir une autre valeur."
+        function=Gamefunction::menu;
+        break;
+        ResetCharacters();
     }
 }
 
@@ -247,7 +255,7 @@ void Game::CharacterChoice()
         warrior;
         break;
     case 2:
-        wizard;
+        wizard;     //tempo
         break;
     case 3:         //tempo
         archer;
@@ -286,6 +294,7 @@ void Game::PlayGame(){
 void Game::Fight()
 {
     system("cls");
+    ResetCharacters();
     turn = 1;
     //condition pour 1 enemie a faire
     while (!warrior->isdead() && !wizard->isdead() && !archer->isdead() && !goblin->isdead() && !skeleton->isdead() && !ghost->isdead())
@@ -344,6 +353,7 @@ void Game::Fight()
             std::cout << warrior->GetName() << " a gagne.\n";
             std::cout << "Warrior à gagner 50 exp.\n";
             warrior->SetCurrentExp(50);
+            ResetCharacters();
             function=Gamefunction::win;
             return;
         }
