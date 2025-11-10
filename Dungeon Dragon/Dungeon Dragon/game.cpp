@@ -13,8 +13,7 @@ void Game::Initialise()
     char left = 'q';
     char right = 'd';
     // _kbhit()
-    function = Gamefunction::menu;
-    
+    function = Gamefunction::menu;   
 }
 
 void Game::GameLoop()
@@ -27,7 +26,7 @@ void Game::GameLoop()
                 Menu();
                 break;
             case Gamefunction::play:
-                PlayGame();
+                PlayFightLoop();
                 break;
             case Gamefunction::map:
                 //displaygrid();
@@ -221,11 +220,12 @@ void Game::Menu()
     switch(inp)
     {
         case 1:
-            function = Gamefunction::play; 
+            //function = Gamefunction::;
+            //break;
+           
+         case 2:
+            function = Gamefunction::play;
             break;
-        // case 2:
-            // function = Gamefunction::;
-            // break;
         case 3 :
             function = Gamefunction::leave;
         default:
@@ -266,7 +266,7 @@ void Game::CharacterChoice()
 }
    
 
-void Game::PlayGame(){
+void Game::PlayFightLoop(){
     system("cls");
     //keyinput = getch();
     char input;
