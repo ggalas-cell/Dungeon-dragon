@@ -12,6 +12,8 @@ public :
     int diffi;
     int enemyset;
     int enemyneeded;
+    int doorset;
+    int doorneeded;
 
     std::vector<std::vector<Cell>> cells;
 
@@ -19,9 +21,9 @@ public :
     int difficulty();
     void displaygrid();
     void setenemy();
+    void setdoor();
     //grid();
 };
-
 
 
 
