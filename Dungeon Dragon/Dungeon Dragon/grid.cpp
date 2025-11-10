@@ -20,13 +20,13 @@ void Grid::displaygrid()
     switch(diffi)
     {
         case 1:
-            lines=9;columns=9;enemyneeded = 10;break;
+            lines=9;columns=9;enemyneeded = 10;doorneeded = 10;break;
         case 2:
-            lines=16;columns=16;enemyneeded = 40;break;
+            lines=16;columns=16;enemyneeded = 40;doorneeded = 40;break;
         case 3:
-            lines=30;columns=16;enemyneeded = 99;break;
+            lines=30;columns=16;enemyneeded = 99;doorneeded = 99;break;
         default:
-            lines = 9;columns=9;enemyneeded = 10;
+            lines = 9;columns=9;enemyneeded = 10;doorneeded = 10;
     }
     cells.assign(lines, std::vector<Cell>(columns));
 
@@ -72,13 +72,25 @@ void Grid::setenemy()
     {
         int randomline = rand() % lines;
         int randomcoll = rand() % columns;
-        int* rl=&randomline;
-        int* rc=&randomcoll;
-        if (isenemy[rl][rc] == false)
+        if (!cells[randomline][randomcoll].isenemy&&!cells[randomline][randomcoll].isdoor)
         {
-            isenemy[rl][rc] = true;
+            cells[randomline][randomcoll].isenemy = true;
             enemyset++;
         }
     }
 }
-
+void Grid::setdoor()
+{
+    srand(time(0));
+    doorset=0;
+    while (doorset < doorneeded)
+    {
+        int randomline = rand() % lines;
+        int randomcoll = rand() % columns;
+        if (!cells[randomline][randomcoll].isdoor&&!cells[randomline][randomcoll].isenemy)
+        {
+            cells[randomline][randomcoll].isdoor = true;
+            doorset++;
+        }
+    }
+}b
