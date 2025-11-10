@@ -53,7 +53,7 @@ public:
 	void Initialise();
 	void GameLoop();
 	void CharacterChoice();
-	void PlayGame();
+	void PlayFightLoop();
 	void Fight();
 	void ShutDown();
 	void Menu();
