@@ -93,5 +93,5 @@ void Grid::setdoor()
             doorset++;
         }
     }
-}b
+}
 

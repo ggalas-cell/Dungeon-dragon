@@ -229,8 +229,8 @@ void Game::Menu()
         case 3 :
             function = Gamefunction::leave;
         default:
-        std::cout<<"Erreur Valeur inconnue !!!"
-        std::cout<<"Veuillez saisir une autre valeur."
+            std::cout << "Erreur Valeur inconnue !!!";
+            std::cout << "Veuillez saisir une autre valeur.";
         function=Gamefunction::menu;
         break;
         ResetCharacters();
