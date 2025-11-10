@@ -276,7 +276,7 @@ void Game::PlayGame(){
 
     switch (input) {
         case 'a':
-            function = Gamefunction::fight;
+            function = Gamefunction::fight; 
             break;
         case 'f':
             function = Gamefunction::leave;
