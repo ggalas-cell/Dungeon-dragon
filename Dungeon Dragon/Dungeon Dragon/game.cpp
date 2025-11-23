@@ -211,7 +211,7 @@ void Game::Menu()
                                                                                                                          
     )";
     std::cout << "\n";
-    std::cout<<"1. Lancer le jeu\n ";
+    std::cout<<"1. Lancer le jeu\n ";   
     std::cout << "2. Fight loop\n";
     std::cout << "3.  Quitter\n";
     std::cout << "\n";

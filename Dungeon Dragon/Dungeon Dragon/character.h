@@ -10,7 +10,7 @@ public:
 	float dmg;
 	float speed;
 	int lv;
-	bool dodge = false;
+	bool dodge = true ;
 	std::string name;
 	character(const std::string& n, float ch, float mh, float d, float sa, float lv)
 		: name(n), currentHp(ch), maxHp(mh), dmg(d), speed(sa), lv(lv) {
@@ -22,7 +22,7 @@ public:
 	}
 	virtual void attack(character& target)
 	{
-		if (dodge)
+		if (target.dodge=true)
 		{
 			std::cout << name << " attaque " << target.name << "\n";
 			dodge = false; return;
@@ -32,7 +32,6 @@ public:
 			std::cout << name << " attaque " << target.name << "\n";
 			std::cout << target.name << " subit " << dmg << " degats ! \n";
 			target.takedmg(dmg);
-			dodge = false;
 		}
 	}
 	void takedmg(int dmg)

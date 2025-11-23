@@ -10,17 +10,17 @@ private:
 	{
 		if (currentexp != maxexp)return;
 		lv++;
-		maxexp *= 1.5;
-		maxHp *= 1.25;
-		currentHp *= 1.25;
+		maxexp *= 1.5f;
+		maxHp *= 1.25f;
+		currentHp *= 1.25f;
 		if (currentHp > maxHp)currentHp = maxHp;
-		dmg *= 1.4;
-		speed *= 1.25;
+		dmg *= 1.4f;
+		speed *= 1.25f;
 		currentexp -= maxexp;
-		maxexp *= 1.5;
+		maxexp *= 1.5f;
 	}
 public:
-	heroes(const std::string& n, float ch, float mh, float d, float sp, float lv) : character(n, ch, mh, d, sp, lv) {}
+	heroes(const std::string& n, float ch, float mh, float d, float sp, float lv,float cexp,float mexp) : character(n, ch, mh, d, sp, lv) {}
 	float GetCurrentExp() { return currentexp; }
 	float GetMaxExp() { return maxexp; }
 	void SetCurrentExp(float expvalue)
