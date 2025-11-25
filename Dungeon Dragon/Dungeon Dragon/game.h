@@ -17,7 +17,7 @@ enum class Gamefunction
 	training,
 	fight,
 	doors,
-	win,
+	winInLoop,
 	loose,
 	leave,
 };

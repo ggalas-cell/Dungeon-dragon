@@ -66,6 +66,9 @@
     <ClInclude Include="cell.h">
       <Filter>Fichiers d%27en-tête\map.h</Filter>
     </ClInclude>
+    <ClInclude Include="ClsFightLoop.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -100,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="cell.cpp">
       <Filter>Fichiers sources\map.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ClsFightLoop.cpp">
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
